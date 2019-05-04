@@ -1,9 +1,4 @@
-var http = require("http");
-
-//create a server object:
-http
-  .createServer(function(req, res) {
-    res.write("Hello World!"); //write a response to the client
-    res.end(); //end the response
-  })
-  .listen(8080); //the server object listens on port 8080
+// for endpoint 
+const sqlite3  = require('sqlite3').verbose(); 
+const db       = new sqlite3.Database('./src/contacts.db');
+module.exports = db;
